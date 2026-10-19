@@ -1,0 +1,450 @@
+/* PALETA: amarillo #FFDE58, negro #000000, gris oscuro #333333,
+   gris medio #808080 y blanco #FFFFFF. */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: #333333;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FFFFFF;
+}
+
+.barra-superior {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    padding: 14px 4.5%;
+    min-height: 105px;
+    width: 100%;
+    background-color: #333333;
+}
+
+.bloque-logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.bloque-logo a {
+    display: flex;
+    align-items: center;
+}
+
+.bloque-logo img {
+    display: block;
+    width: auto;
+    max-width: 230px;
+    max-height: 76px;
+    object-fit: contain;
+}
+
+.bloque-enlaces {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.bloque-enlaces a {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #333333;
+    background-color: #FFFFFF;
+    text-decoration: none;
+    padding: 11px 14px 9px;
+    border-radius: 7px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.bloque-enlaces a:hover {
+    background-color: #FFDE58;
+    transform: translateY(-2px);
+}
+
+.presentacion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(30px, 6vw, 90px);
+    padding: 50px 7%;
+    min-height: 440px;
+    background-color: #FFDE58;
+}
+
+.imagen-principal {
+    flex: 0 1 390px;
+    display: flex;
+    justify-content: center;
+    min-width: 0;
+}
+
+.imagen-principal img {
+    display: block;
+    width: 100%;
+    max-width: 390px;
+    max-height: 340px;
+    object-fit: contain;
+}
+
+.bienvenida {
+    flex: 0 1 570px;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.etiqueta {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #555555;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.bienvenida h1 {
+    max-width: 650px;
+    margin: 0 0 18px;
+    font-size: clamp(38px, 4.4vw, 58px);
+    line-height: 1.02;
+    font-weight: 800;
+}
+
+.bienvenida p {
+    max-width: 560px;
+    margin: 0 0 28px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.boton-principal {
+    display: inline-block;
+    padding: 13px 20px;
+    border: 2px solid #333333;
+    border-radius: 7px;
+    background-color: #333333;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 700;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.boton-principal:hover {
+    background-color: transparent;
+    color: #333333;
+}
+
+.analisis-mercado {
+    padding: 75px 6%;
+    background-color: #F7F7F5;
+}
+
+.encabezado-seccion {
+    max-width: 850px;
+    margin: 0 auto 38px;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.encabezado-seccion h2,
+.contacto h2 {
+    margin: 0;
+    font-family: 'League Spartan', sans-serif;
+    font-size: clamp(32px, 3.5vw, 44px);
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.linea-decorativa {
+    width: 86px;
+    height: 5px;
+    margin: 17px auto;
+    border-radius: 10px;
+    background-color: #FFDE58;
+}
+
+.encabezado-seccion > p {
+    margin: 0;
+    color: #666666;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.tarjetas-mercado {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 22px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.tarjeta-mercado {
+    padding: 28px 25px;
+    border: 1px solid #E6E6E6;
+    border-top: 5px solid #FFDE58;
+    border-radius: 12px;
+    background-color: #FFFFFF;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.numero-tarjeta {
+    margin-bottom: 14px;
+    color: #B18B00;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.tarjeta-mercado h3 {
+    margin: 0 0 15px;
+    color: #333333;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.tarjeta-mercado p,
+.tarjeta-mercado li {
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+.tarjeta-mercado p {
+    margin: 0 0 14px;
+}
+
+.tarjeta-mercado ul {
+    display: grid;
+    gap: 9px;
+    margin: 0 0 16px;
+    padding-left: 20px;
+}
+
+.tarjeta-mercado li::marker {
+    color: #B18B00;
+}
+
+.tarjeta-destacada {
+    background-color: #333333;
+    border-top-color: #FFDE58;
+    color: #FFFFFF;
+}
+
+.tarjeta-destacada h3 {
+    color: #FFFFFF;
+}
+
+.tarjeta-destacada .numero-tarjeta {
+    color: #FFDE58;
+}
+
+.tarjeta-destacada .texto-intro {
+    color: #EEEEEE;
+}
+
+.dato-proyeccion {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.17);
+}
+
+.dato-proyeccion strong {
+    flex: 0 0 82px;
+    color: #FFDE58;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 29px;
+    font-weight: 800;
+}
+
+.dato-proyeccion span {
+    color: #FFFFFF;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.tarjeta-destacada .nota-tarjeta {
+    margin-top: 16px;
+    margin-bottom: 0;
+    color: #E6E6E6;
+    font-size: 12px;
+}
+
+.seccion-ubicacion {
+    padding: 65px 6% 55px;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.90), rgba(255, 255, 255, 0.90)), url("./imagenes/foto-vivienda.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.seccion-ubicacion .encabezado-seccion {
+    margin-bottom: 25px;
+}
+
+.ubicacion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.ubicacion img {
+    display: block;
+    width: auto;
+    max-width: min(100%, 850px);
+    max-height: 360px;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.contacto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(30px, 6vw, 90px);
+    padding: 42px 6%;
+    width: 100%;
+    background-color: #333333;
+    color: #FFFFFF;
+}
+
+.contacto-titulo {
+    max-width: 400px;
+}
+
+.contacto h2 {
+    margin-bottom: 12px;
+}
+
+.contacto p {
+    color: #E6E6E6;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.etiqueta-clara {
+    color: #FFDE58;
+}
+
+.contacto img {
+    display: block;
+    width: min(100%, 470px);
+    max-height: 250px;
+    object-fit: contain;
+}
+
+@media (max-width: 1100px) {
+    .barra-superior {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .bloque-enlaces {
+        justify-content: flex-start;
+    }
+
+    .tarjetas-mercado {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .tarjeta-destacada {
+        grid-row: span 2;
+    }
+}
+
+@media (max-width: 700px) {
+    .barra-superior {
+        padding: 18px 5%;
+    }
+
+    .bloque-logo img {
+        max-width: 190px;
+        max-height: 65px;
+    }
+
+    .bloque-enlaces {
+        gap: 8px;
+    }
+
+    .bloque-enlaces a {
+        font-size: 14px;
+        padding: 9px 11px;
+    }
+
+    .presentacion {
+        flex-direction: column;
+        gap: 18px;
+        padding: 35px 7% 45px;
+        text-align: center;
+    }
+
+    .imagen-principal {
+        flex-basis: auto;
+        width: 100%;
+    }
+
+    .imagen-principal img {
+        max-width: 270px;
+        max-height: 240px;
+    }
+
+    .bienvenida {
+        flex-basis: auto;
+    }
+
+    .bienvenida p {
+        font-size: 15px;
+    }
+
+    .analisis-mercado {
+        padding: 55px 5%;
+    }
+
+    .tarjetas-mercado {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta-destacada {
+        grid-row: auto;
+    }
+
+    .tarjeta-mercado {
+        padding: 25px 22px;
+    }
+
+    .seccion-ubicacion {
+        padding: 50px 5% 40px;
+    }
+
+    .ubicacion {
+        padding: 0;
+    }
+
+    .contacto {
+        flex-direction: column;
+        gap: 20px;
+        padding: 38px 7%;
+        text-align: center;
+    }
+
+    .contacto img {
+        max-width: 430px;
+    }
+}

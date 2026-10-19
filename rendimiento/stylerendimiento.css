@@ -1,0 +1,397 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f5f5f2;
+  color: #333333;
+  font-family: 'League Spartan', sans-serif;
+}
+
+.barra-superior {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 10px 30px;
+  min-height: 110px;
+  width: 100%;
+  background-color: #333333;
+}
+
+.bloque-logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.bloque-logo .home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.bloque-logo .home img {
+  display: block;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.bloque-logo > img {
+  display: block;
+  height: auto;
+  max-height: 80px;
+  object-fit: contain;
+}
+
+.bloque-enlaces {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.bloque-enlaces a {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+  background-color: #ffffff;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.bloque-enlaces a:hover {
+  background-color: #eeeeee;
+  transform: translateY(-2px);
+}
+
+.bloque-enlaces .excepcion {
+  background-color: #FFDE58;
+}
+
+.pagina-rendimiento {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+  padding: 42px 0 70px;
+}
+
+.introduccion {
+  text-align: center;
+  padding: 10px 20px 30px;
+}
+
+.introduccion h1 {
+  margin: 0;
+  font-size: clamp(30px, 4vw, 42px);
+  font-weight: 800;
+}
+
+.lineaestetica {
+  width: 82px;
+  height: 5px;
+  margin: 16px auto 20px;
+  border-radius: 10px;
+  background-color: #FFDE58;
+}
+
+.introduccion p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 19px;
+  line-height: 1.55;
+}
+
+.seccion-financiera,
+.resumen-economico,
+.distribucion,
+.conclusion {
+  margin-top: 28px;
+  padding: 28px;
+  border-radius: 18px;
+  background-color: #ffffff;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+.seccion-financiera > h2,
+.resumen-economico > h2,
+.distribucion > h2,
+.conclusion > h2 {
+  margin: 0 0 22px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.seccion-financiera > h2::after,
+.resumen-economico > h2::after,
+.distribucion > h2::after,
+.conclusion > h2::after {
+  content: "";
+  display: block;
+  width: 55px;
+  height: 4px;
+  margin: 10px auto 0;
+  border-radius: 10px;
+  background-color: #FFDE58;
+}
+
+.subtitulo-seccion {
+  margin: 22px 0 12px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.lista-gastos {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item-gasto {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 15px 18px;
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+  background-color: #fafaf8;
+  font-size: 17px;
+}
+
+.item-gasto strong {
+  text-align: right;
+}
+
+.total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 14px;
+  padding: 16px 20px;
+  border-radius: 11px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.total-inicial,
+.total-mensual {
+  background-color: #fff3b5;
+}
+
+.total-general {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.total-general strong {
+  color: #FFDE58;
+  text-align: right;
+}
+
+.tarjetas-ingresos,
+.resumen-tarjetas,
+.distribucion-tarjetas {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.tarjeta-ingreso {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid #e9e9e9;
+  border-radius: 14px;
+  background-color: #fafaf8;
+}
+
+.tarjeta-ingreso h3 {
+  margin: 0 0 12px;
+  font-size: 22px;
+}
+
+.formula,
+.monto {
+  margin: 5px 0;
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.resultado {
+  align-self: stretch;
+  margin: 14px 0 0;
+  padding: 13px 10px;
+  border-radius: 9px;
+  background-color: #FFDE58;
+  font-size: 23px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.nota {
+  margin: 12px 0 0;
+  color: #626262;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.resumen-tarjetas {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.resumen-tarjeta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  min-height: 120px;
+  gap: 12px;
+  padding: 20px 15px;
+  border-radius: 13px;
+  background-color: #f1f1ed;
+  text-align: center;
+}
+
+.resumen-tarjeta span {
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+.resumen-tarjeta strong {
+  font-size: clamp(18px, 2vw, 23px);
+  overflow-wrap: anywhere;
+}
+
+.resumen-tarjeta.destacado {
+  background-color: #FFDE58;
+}
+
+.distribucion > p,
+.conclusion p {
+  max-width: 900px;
+  margin: 0 auto 20px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.tarjeta-distribucion {
+  padding: 25px;
+  border-radius: 14px;
+  background-color: #f3f3ef;
+  text-align: center;
+}
+
+.tarjeta-distribucion .porcentaje {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 8px 15px;
+  border-radius: 8px;
+  background-color: #FFDE58;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.tarjeta-distribucion h3 {
+  margin: 0 0 15px;
+  font-size: 21px;
+}
+
+.tarjeta-distribucion > strong {
+  display: block;
+  font-size: clamp(22px, 2.5vw, 30px);
+  overflow-wrap: anywhere;
+}
+
+.tarjeta-distribucion p {
+  margin: 10px 0 0;
+  font-size: 17px;
+}
+
+.conclusion {
+  border-top: 5px solid #FFDE58;
+}
+
+.conclusion p {
+  margin-bottom: 0;
+}
+
+/* Adaptación para pantallas medianas y celulares */
+@media (max-width: 950px) {
+  .barra-superior {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 18px 22px;
+  }
+
+  .bloque-enlaces {
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .bloque-enlaces a {
+    font-size: 16px;
+  }
+
+  .resumen-tarjetas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .pagina-rendimiento {
+    width: 92%;
+    padding-top: 25px;
+  }
+
+  .seccion-financiera,
+  .resumen-economico,
+  .distribucion,
+  .conclusion {
+    padding: 20px 16px;
+    margin-top: 20px;
+  }
+
+  .seccion-financiera > h2,
+  .resumen-economico > h2,
+  .distribucion > h2,
+  .conclusion > h2 {
+    font-size: 24px;
+  }
+
+  .tarjetas-ingresos,
+  .resumen-tarjetas,
+  .distribucion-tarjetas {
+    grid-template-columns: 1fr;
+  }
+
+  .item-gasto,
+  .total {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 7px;
+    font-size: 16px;
+  }
+
+  .item-gasto strong,
+  .total strong {
+    text-align: left;
+    overflow-wrap: anywhere;
+  }
+
+  .introduccion p,
+  .distribucion > p,
+  .conclusion p {
+    font-size: 17px;
+  }
+}

@@ -1,0 +1,373 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --gris: #333333;
+    --amarillo: #FFDE58;
+    --blanco: #ffffff;
+    --fondo: #f5f5f2;
+    --gris-claro: #eeeeea;
+}
+
+body {
+    margin: 0;
+    background: var(--fondo);
+    color: var(--gris);
+    font-family: 'League Spartan', sans-serif;
+}
+
+/* BARRA SUPERIOR */
+.barra-superior {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 10px 30px;
+    min-height: 110px;
+    width: 100%;
+    background-color: var(--gris);
+}
+
+.bloque-logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.bloque-logo .home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.bloque-logo .home img {
+    display: block;
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.bloque-logo img {
+    display: block;
+    height: auto;
+    max-height: 80px;
+    object-fit: contain;
+}
+
+.bloque-enlaces {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.bloque-enlaces a {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--gris);
+    background-color: var(--blanco);
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    transition: background-color .2s ease, transform .2s ease;
+}
+
+.bloque-enlaces a:hover {
+    background-color: var(--amarillo);
+    transform: translateY(-2px);
+}
+
+.bloque-enlaces .excepcion {
+    background-color: var(--amarillo);
+}
+
+/* ESTRUCTURA GENERAL: TODOS LOS RECURSOS CON EL MISMO ANCHO */
+.cuerporecursos {
+    width: min(1180px, 92%);
+    margin: 45px auto 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 30px;
+}
+
+.recurso-card {
+    width: 100%;
+    min-width: 0;
+    padding: 32px;
+    background: var(--blanco);
+    border: 1px solid #e2e2dd;
+    border-radius: 18px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, .06);
+}
+
+.recurso-card > h1 {
+    margin: 0 0 18px;
+    padding-bottom: 15px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+    border-bottom: 4px solid var(--amarillo);
+}
+
+.descripcion {
+    max-width: 900px;
+    margin: 0 auto 28px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.55;
+}
+
+.subtitulo {
+    margin: 0 0 20px;
+    text-align: center;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+/* RECURSOS HUMANOS: PUESTOS UNIFORMES */
+.puestos,
+.jerarquia,
+.gastos,
+.servicios,
+.capital,
+.financiacionpropia {
+    width: 100%;
+    margin-top: 28px;
+}
+
+.lista-puestos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.puesto {
+    min-width: 0;
+    padding: 22px;
+    background: #fafaf8;
+    border: 1px solid #deded8;
+    border-top: 5px solid var(--amarillo);
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.puesto h3 {
+    margin: 0 0 14px;
+    text-align: center;
+    font-size: 21px;
+}
+
+.puesto > p {
+    margin: 5px 0;
+    font-size: 16px;
+    line-height: 1.45;
+}
+
+.funcion {
+    margin-top: auto;
+    padding: 14px;
+    background: #eeeeea;
+    border-radius: 10px;
+}
+
+.funcion h4 {
+    margin: 0 0 7px;
+    font-size: 17px;
+}
+
+.funcion p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.jerarquia {
+    padding: 24px;
+    background: #fafaf8;
+    border: 1px solid #deded8;
+    border-radius: 14px;
+}
+
+.jerarquia img {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+/* COSTOS: DOS CUADRADOS AMARILLOS EN PARALELO */
+.costos {
+    width: 100%;
+    margin-top: 28px;
+    padding: 24px;
+    background: #f0f0ec;
+    border: 1px solid #deded8;
+    border-radius: 15px;
+}
+
+.costos > h2 {
+    margin: 0 0 18px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.costos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.costo-item {
+    min-width: 0;
+    min-height: 115px;
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-align: center;
+    background: var(--amarillo);
+    border-radius: 13px;
+}
+
+.costo-item h3 {
+    margin: 0;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.costo-item p {
+    margin: 0;
+    font-size: 23px;
+    font-weight: 800;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+}
+
+.nota-costo {
+    margin: 16px 0 0;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* RECURSOS TECNOLÓGICOS Y MATERIALES */
+.lista-recursos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.lista-recursos h3 {
+    min-width: 0;
+    margin: 0;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.4;
+    font-size: 17px;
+    font-weight: 600;
+    background: #f0f0ec;
+    border-radius: 12px;
+}
+
+/* RECURSOS FINANCIEROS */
+.servicio {
+    margin-top: 14px;
+    padding: 20px;
+    background: #f5f5f2;
+    border: 1px solid #e1e1db;
+    border-radius: 13px;
+}
+
+.servicio h3 {
+    margin: 0 0 10px;
+    font-size: 19px;
+}
+
+.servicio p,
+.capital > p,
+.financiacionpropia > p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.capital > p,
+.financiacionpropia > p {
+    margin-bottom: 18px;
+}
+
+/* TABLET Y CELULAR */
+@media (max-width: 850px) {
+    .barra-superior {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 18px 5%;
+    }
+
+    .bloque-enlaces {
+        justify-content: flex-start;
+        gap: 10px;
+    }
+
+    .bloque-enlaces a {
+        font-size: 16px;
+        padding: 9px 12px;
+    }
+
+    .lista-puestos,
+    .lista-recursos {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 560px) {
+    .cuerporecursos {
+        width: 94%;
+        margin-top: 25px;
+    }
+
+    .recurso-card {
+        padding: 20px 15px;
+        border-radius: 14px;
+    }
+
+    .recurso-card > h1 {
+        font-size: 25px;
+    }
+
+    .subtitulo {
+        font-size: 20px;
+    }
+
+    .costos {
+        padding: 16px 12px;
+    }
+
+    .costos-grid {
+        gap: 10px;
+    }
+
+    .costo-item {
+        min-height: 100px;
+        padding: 15px 8px;
+    }
+
+    .costo-item h3 {
+        font-size: 16px;
+    }
+
+    .costo-item p {
+        font-size: 19px;
+    }
+}
