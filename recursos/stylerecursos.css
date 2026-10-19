@@ -307,6 +307,55 @@ body {
     margin-bottom: 18px;
 }
 
+/* FUENTES DE FINANCIACIÓN – FORMA JURÍDICA */
+.fuentes-financiacion {
+    width: 100%;
+    margin-top: 28px;
+    padding: 24px;
+    background: #fafaf8;
+    border: 1px solid #deded8;
+    border-radius: 15px;
+}
+
+.fuentes-financiacion > .subtitulo {
+    margin-bottom: 24px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid var(--amarillo);
+    line-height: 1.3;
+}
+
+.bloque-financiacion {
+    margin-top: 18px;
+    padding: 22px;
+    background: var(--blanco);
+    border: 1px solid #e1e1db;
+    border-left: 5px solid var(--amarillo);
+    border-radius: 12px;
+}
+
+.bloque-financiacion h3 {
+    margin: 0 0 14px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.bloque-financiacion p {
+    margin: 0 0 14px;
+    font-size: 16px;
+    line-height: 1.65;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+.bloque-financiacion p:last-child {
+    margin-bottom: 0;
+}
+
+.bloque-financiacion strong {
+    font-weight: 800;
+}
+
 /* TABLET Y CELULAR */
 @media (max-width: 850px) {
     .barra-superior {
@@ -369,5 +418,27 @@ body {
 
     .costo-item p {
         font-size: 19px;
+    }
+
+    /* FUENTES DE FINANCIACIÓN EN CELULARES */
+    .fuentes-financiacion {
+        padding: 16px 12px;
+    }
+
+    .fuentes-financiacion > .subtitulo {
+        font-size: 20px;
+    }
+
+    .bloque-financiacion {
+        padding: 16px;
+    }
+
+    .bloque-financiacion h3 {
+        font-size: 18px;
+    }
+
+    .bloque-financiacion p {
+        font-size: 15px;
+        line-height: 1.6;
     }
 }
